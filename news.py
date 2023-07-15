@@ -19,7 +19,7 @@ def print_news(category):
 
 
 @tool()
-def latest_news(category, cat):
+def latest_news(cat):
     """This tool is useful to gather the latest news."""
     categories = ['politica',
             'economia e finanza',
