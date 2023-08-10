@@ -19,13 +19,14 @@ def print_news(category):
 
 
 @tool()
-def latest_news(cat):
+def latest_news(argomenti,cat):
     """This tool is useful to gather the latest news."""
     categories = ['politica',
             'economia e finanza',
             'scienza e tecnologia',
             'viaggi e turismo',
-            'sport', 'cronaca',
+            'sport',
+            'cronaca',
             'stili di vita e tempo libero',
             'salute', 'arti e spettacolo',
             'societa',
@@ -35,7 +36,14 @@ def latest_news(cat):
             'spettacolo', 
         ]
     news=[]
-    for category in categories:
-        news.append(print_news(category))
+    
+    argomenti = argomenti.split(',')
+    
+    if all(argomento in categories for argomento in argomenti):
+        for argomento in argomenti:
+            news.append(print_news(argomento))
+    else:
+        for category in categories:
+            news.append(print_news(category))
         
     return news
