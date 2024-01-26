@@ -20,15 +20,17 @@ def print_news(category):
 
 @tool()
 def latest_news(argomenti,cat):
-    """This tool is useful to gather the latest news."""
-    categories = ['politica',
+    """useful for knowing the latest news, the input is the news category"""
+    categories = [
+            'politica',
             'economia e finanza',
             'scienza e tecnologia',
             'viaggi e turismo',
             'sport',
             'cronaca',
             'stili di vita e tempo libero',
-            'salute', 'arti e spettacolo',
+            'salute',
+            'arti e spettacolo',
             'societa',
             'esteri',
             'economia',
